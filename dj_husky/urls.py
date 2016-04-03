@@ -16,7 +16,6 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.views.generic import TemplateView
 
-
 urlpatterns = [
     url(r'^api/', include('djhuskyapp.urls')),
     url(r'^', include('pages.urls')),
