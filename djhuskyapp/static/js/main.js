@@ -65,10 +65,6 @@ $(document).ready(function() {
             var id = $(this.innerHTML).attr('id');
             var title = $(this).find('.title').text();
             var artist = $(this).find('.artist').text();
-            console.log(id);
-            console.log(title);
-            console.log(artist);
-
             addToQueue(title, artist, id);
         });
 
@@ -85,14 +81,13 @@ $(document).ready(function() {
 
         console.log(JSON.stringify(data));
 
-        //$.ajax({
-        //    type: "POST",
-        //    url:"/api/songs/",
-        //    data: JSON.stringify(data),
-        //    success: function() {alert("success");}
-        //});
-
-        $.post("/api/songs/", JSON.stringify(data));
+        $.ajax({
+            type: "POST",
+            url:"/api/songs/",
+            data: JSON.stringify(data),
+            contentType: "application/json; charset=utf-8",
+            success: function() {alert("success");}
+        });
     }
 
     function addToVisualQueue(name, artist) {
