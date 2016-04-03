@@ -31,8 +31,10 @@ $(document).ready(function() {
                 for (var i = 0, len=data.length; i < len; i++) {
                     var title = data[i].name;
                     var artist = data[i].artists[0].name;
+                    var uri = data[i].uri
 
-                    result += "<li><div class='song'><p class='title'>" + title + "</p>" + "<p class='artist'>" + artist + "</p></div><div style='clear: both;''></div></li>";
+                    result += "<li><div class='song'><p class='title' id='+ uri +'>" + title + "</p>" + "<p class='artist'>" + artist
+                        + "</p></div><div style='clear: both;''></div></li>";
                 }
                 $("#results").html(result);
             });

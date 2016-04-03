@@ -2,11 +2,19 @@ from django.http import HttpResponse, JsonResponse
 from django.core import serializers
 from rest_framework.decorators import detail_route
 from rest_framework import viewsets
+from rest_framework.renderers import StaticHTMLRenderer
 from rest_framework.response import Response
 import json
 
+from rest_framework.views import APIView
+
 from djhuskyapp.models import Party, Song
 from djhuskyapp.serializers import PartySerializer, SongSerializer
+
+
+class PlayerList(APIView):
+    renderer_classes = [StaticHTMLRenderer]
+    template_name = 'index.html'
 
 
 class PartyViewSet(viewsets.ModelViewSet):
