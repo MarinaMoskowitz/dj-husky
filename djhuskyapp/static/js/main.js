@@ -8,8 +8,7 @@ $(document).ready(function() {
         $("#partyname").val("Welcome to " + party_title + "!");
         console.log(JSON.stringify(party_title));
     });
-
-
+    
 
     $(".sidebar.left").sidebar();
 
@@ -43,15 +42,12 @@ $(document).ready(function() {
                 for (var i = 0, len=data.length; i < len; i++) {
                     var title = data[i].name;
                     var artist = data[i].artists[0].name;
-                    var uri = data[i].uri
+                    var uri = data[i].uri;
 
-                    result += "<li><div class='song'><p class='title' id='+ uri +'>" + title + "</p>" + "<p class='artist'>" + artist
-                        + "</p></div><div style='clear: both;''></div></li>";
+                    result += "<li><div class='song'><p class='title' id='+ uri +'>" + title + "</p>" + "<p class='artist'>" + artist + "</p></div><div style='clear: both;''></div></li>";
                 }
                 $("#results").html(result);
             });
-
-
             event.preventDefault();
         }
     });
@@ -66,5 +62,27 @@ $(document).ready(function() {
             function() {
                 console.log("It worked!");
             }
+    }
+
+    $("#button").click(function() {
+
+        var selected_songs = $(".ui-selected");
+
+        for (var i= 0, len=selected_songs.length; i < len; i++) {
+            console.log(selected_songs[i]);
+        }
+    });
+
+    function addToQueue(name, artist, id) {
+        var listToAddTo = $("#queue");
+        var result = "<div class='containerthing'>" +
+            "<img src='../static/img/up-arrow.png' width='20px' height='20px'>" +
+            "<img src='../static/img/down-arrow.png' width='20px' height='20px'>" +
+            "<div class='song'>" +
+            "<p class='title'>" + name + "</p>" +
+            "<p class='artist'>" + artist + "</p>" +
+            "</div>" +
+            "<div style='clear: both;'></div>";
+        listToAddTo.html(result);
     }
 });
