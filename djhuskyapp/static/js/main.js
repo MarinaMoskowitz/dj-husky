@@ -8,7 +8,7 @@ $(document).ready(function() {
         $("#partyname").val("Welcome to " + party_title + "!");
         console.log(JSON.stringify(party_title));
     });
-    
+
 
     $(".sidebar.left").sidebar();
 
@@ -42,9 +42,9 @@ $(document).ready(function() {
                 for (var i = 0, len=data.length; i < len; i++) {
                     var title = data[i].name;
                     var artist = data[i].artists[0].name;
-                    var uri = data[i].uri;
+                    var uri = data[i].uri.substring(14);
 
-                    result += "<li><div class='song'><p class='title' id='+ uri +'>" + title + "</p>" + "<p class='artist'>" + artist + "</p></div><div style='clear: both;''></div></li>";
+                    result += "<li><div class='song', id=" + uri + "><p class='title'>" + title + "</p>" + "<p class='artist'>" + artist + "</p></div><div style='clear: both;''></div></li>";
                 }
                 $("#results").html(result);
             });
@@ -68,9 +68,15 @@ $(document).ready(function() {
 
         var selected_songs = $(".ui-selected");
 
-        for (var i= 0, len=selected_songs.length; i < len; i++) {
-            console.log(selected_songs[i]);
-        }
+        selected_songs.each(function() {
+            var result = this.innerHTML;
+            console.log(result);
+            console.log($(result).attr('id'));
+            console.log($(result).val('title ui-selectee'));
+            console.log($(result).attr('class'));
+            console.log($(result).attr('artist.ui-selectee'));
+            //console.log(result.id);
+        });
     });
 
     function addToQueue(name, artist, id) {
