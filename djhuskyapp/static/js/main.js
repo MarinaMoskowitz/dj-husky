@@ -1,14 +1,17 @@
 $(document).ready(function() {
 
+
+
     $.ajax({
         url: "/api/parties/21/?format=json"
     }).success(function(response) {
 
         var party_title = response.name;
-        $("#partyname").val("Welcome to " + party_title + "!");
+        $("#partyname").html(party_title);
 
         console.log(JSON.stringify(party_title));
     });
+
 
 
 
