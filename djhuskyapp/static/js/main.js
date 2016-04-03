@@ -6,7 +6,6 @@ $(document).ready(function() {
 
         var party_title = response.name;
         $("#partyname").val("Welcome to " + party_title + "!");
-
         console.log(JSON.stringify(party_title));
     });
 
@@ -58,4 +57,14 @@ $(document).ready(function() {
     });
 
     $('#results').selectable();
+
+    function addToDB() {
+        $.post('http://localhost:8000/api/parties/'),
+        {
+            'name':'Hooray'
+        },
+            function() {
+                console.log("It worked!");
+            }
+    }
 });

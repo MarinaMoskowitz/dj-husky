@@ -111,5 +111,6 @@ body {
 }
 
 #results .ui-selected {
+    background-color: #801515;
     color: #FFAAAA;
 }
