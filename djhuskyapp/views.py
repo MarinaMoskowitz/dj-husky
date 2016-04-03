@@ -1,4 +1,3 @@
-from django.core.serializers import json
 from django.http import HttpResponse, JsonResponse
 from django.core import serializers
 from rest_framework.decorators import detail_route

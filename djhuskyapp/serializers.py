@@ -6,7 +6,7 @@ from djhuskyapp.models import Party, Song
 class SongSerializer(serializers.ModelSerializer):
     class Meta:
         model = Song
-        fields = ('song_id', 'party', 'track_id', 'upvotes', 'downvotes')
+        fields = ('song_id', 'party', 'track_id', 'upvotes', 'downvotes', 'played')
 
 
 # noinspection PyAbstractClass

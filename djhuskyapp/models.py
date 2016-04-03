@@ -22,9 +22,10 @@ class Song(models.Model):
     track_id = models.CharField(max_length=100)
     upvotes = models.IntegerField(default=0)
     downvotes = models.IntegerField(default=0)
+    played = models.BooleanField(default=False)
 
     class Meta:
         unique_together = ('party', 'track_id')
 
     def __unicode__(self):
-        return '{0}, {1}, {2}, {3}'.format(self.song_id, self.upvotes, self.downvotes, self.track_id)
+        return '{0}, {1}, {2}, {3}, {4}'.format(self.song_id, self.upvotes, self.downvotes, self.track_id, self.played)
