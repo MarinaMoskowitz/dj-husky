@@ -55,13 +55,6 @@ body {
 	float: right;
 }
 
-#results .ui-selecting {
-}
-
-#results .ui-selected {
-    color: #FFAAAA;
-}
-
 .sidebar.left {
     position: fixed;
     top: 0;
@@ -86,7 +79,14 @@ body {
 
 #results .song {
     color: #AA3939;
-    width: inherit;
     font-size: 70%;
-    padding: 0px;
+    list-style:none;
+    padding-left:0;
+}
+
+#results .ui-selecting {
+}
+
+#results .ui-selected {
+    color: #FFAAAA;
 }
