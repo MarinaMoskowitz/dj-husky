@@ -77,14 +77,37 @@ body {
     font-size: medium;
 }
 
-#results .song {
+#results {
     color: #AA3939;
     font-size: 70%;
-    list-style:none;
-    padding-left:0;
+    list-style-type: none;
+    margin-left:0;
+
+    padding: 0;
 }
 
+#results p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/*#results .title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}*/
+
+/*.sidebar.left #button {
+    background: green;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+}*/
+
 #results .ui-selecting {
+    background-color: #801515;
+    color: #FFAAAA;
 }
 
 #results .ui-selected {

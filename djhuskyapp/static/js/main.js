@@ -32,7 +32,7 @@ $(document).ready(function() {
                     var title = data[i].name;
                     var artist = data[i].artists[0].name;
 
-                    result += "<div class='song'><p class='title'>" + title + "</p>" + "<p class='artist'>" + artist + "</p></div><div style='clear: both;''></div>";
+                    result += "<li><div class='song'><p class='title'>" + title + "</p>" + "<p class='artist'>" + artist + "</p></div><div style='clear: both;''></div></li>";
                 }
                 $("#results").html(result);
             });
