@@ -89,6 +89,6 @@ $(document).ready(function() {
             "<p class='artist'>" + artist + "</p>" +
             "</div>" +
             "<div style='clear: both;'></div>";
-        listToAddTo.html(result);
+        listToAddTo.append(result);
     }
 });
