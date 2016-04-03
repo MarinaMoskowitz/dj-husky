@@ -1,13 +1,16 @@
 $(document).ready(function() {
 
+
+
     $.ajax({
         url: "/api/parties/21/?format=json"
     }).success(function(response) {
 
         var party_title = response.name;
-        $("#partyname").val("Welcome to " + party_title + "!");
-    });
 
+        $("#partyname").val("Welcome to " + party_title + "!");
+
+    });
 
     $(".sidebar.left").sidebar();
 
@@ -51,17 +54,8 @@ $(document).ready(function() {
         }
     });
 
-    $('#results').selectable();
 
-    function addToDB() {
-        $.post('http://localhost:8000/api/parties/'),
-        {
-            'name':'Hooray'
-        },
-            function() {
-                console.log("It worked!");
-            }
-    }
+    $('#results').selectable();
 
     $("#button").click(function() {
 
@@ -82,6 +76,26 @@ $(document).ready(function() {
     });
 
     function addToQueue(name, artist, id) {
+        addToVisualQueue(name, artist);
+
+        var data = {
+            "track_id": id,
+            "party": 21
+        };
+
+        console.log(JSON.stringify(data));
+
+        //$.ajax({
+        //    type: "POST",
+        //    url:"/api/songs/",
+        //    data: JSON.stringify(data),
+        //    success: function() {alert("success");}
+        //});
+
+        $.post("/api/songs/", JSON.stringify(data));
+    }
+
+    function addToVisualQueue(name, artist) {
         var listToAddTo = $("#queue");
         var result = "<div class='containerthing'>" +
             "<img src='../static/img/up-arrow.png' width='20px' height='20px'>" +
@@ -93,4 +107,5 @@ $(document).ready(function() {
             "<div style='clear: both;'></div>";
         listToAddTo.append(result);
     }
+
 });
