@@ -83,14 +83,15 @@ $(document).ready(function() {
 
         console.log(JSON.stringify(data));
 
-        //$.ajax({
-        //    type: "POST",
-        //    url:"/api/songs/",
-        //    data: JSON.stringify(data),
-        //    success: function() {alert("success");}
-        //});
+        $.ajax({
+            type: "POST",
+            url:"/api/songs/",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(data),
+            success: function() {alert("success");}
+        });
 
-        $.post("/api/songs/", JSON.stringify(data));
+        //$.post("/api/songs/", JSON.stringify(data));
     }
 
     function addToVisualQueue(name, artist) {

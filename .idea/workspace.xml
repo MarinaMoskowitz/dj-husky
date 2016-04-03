@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51184b9c-b463-4d3b-a52b-02cb43170b30" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/djhuskyapp/static/js/main.js" afterPath="$PROJECT_DIR$/djhuskyapp/static/js/main.js" />
     </list>
     <ignored path="dj-husky.iws" />
@@ -27,11 +28,11 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/djhuskyapp/static/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.682959">
-              <caret line="85" column="18" selection-start-line="85" selection-start-column="18" selection-end-line="90" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.78203434">
+              <caret line="90" column="51" selection-start-line="90" selection-start-column="51" selection-end-line="90" selection-end-column="51" />
               <folding>
-                <marker date="1459674536000" expanded="true" signature="1433:1445" placeholder="..." />
-                <marker date="1459674536000" expanded="true" signature="3034:3046" placeholder="..." />
+                <marker date="1459674797000" expanded="true" signature="1433:1445" placeholder="..." />
+                <marker date="1459674797000" expanded="true" signature="3084:3096" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -542,8 +543,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="67" column="31" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
           <folding>
-            <marker date="1459674536000" expanded="true" signature="1433:1445" placeholder="..." />
-            <marker date="1459674536000" expanded="true" signature="3034:3046" placeholder="..." />
+            <marker date="1459674797000" expanded="true" signature="1433:1445" placeholder="..." />
+            <marker date="1459674797000" expanded="true" signature="3084:3096" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -569,8 +570,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1459674536000" expanded="true" signature="1433:1445" placeholder="..." />
-            <marker date="1459674536000" expanded="true" signature="3034:3046" placeholder="..." />
+            <marker date="1459674797000" expanded="true" signature="1433:1445" placeholder="..." />
+            <marker date="1459674797000" expanded="true" signature="3084:3096" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -835,11 +836,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/djhuskyapp/static/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.682959">
-          <caret line="85" column="18" selection-start-line="85" selection-start-column="18" selection-end-line="90" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.78203434">
+          <caret line="90" column="51" selection-start-line="90" selection-start-column="51" selection-end-line="90" selection-end-column="51" />
           <folding>
-            <marker date="1459674536000" expanded="true" signature="1433:1445" placeholder="..." />
-            <marker date="1459674536000" expanded="true" signature="3034:3046" placeholder="..." />
+            <marker date="1459674797000" expanded="true" signature="1433:1445" placeholder="..." />
+            <marker date="1459674797000" expanded="true" signature="3084:3096" placeholder="..." />
           </folding>
         </state>
       </provider>
