@@ -6,7 +6,6 @@ import spotipy
 import spotipy.util as util
 
 
-
 #list all the albums released by that artist
 """
 birdy_uri = 'spotify:artist:0EmeFodog0BfCgMzAIvKQp'
