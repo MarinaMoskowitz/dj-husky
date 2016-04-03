@@ -1,21 +1,13 @@
-from django.shortcuts import render
-
-
-from django.http import HttpResponse
-from rest_framework.renderers import JSONRenderer
+from django.core.serializers import json
+from django.http import HttpResponse, JsonResponse
+from django.core import serializers
+from rest_framework.decorators import detail_route
 from rest_framework import viewsets
+from rest_framework.response import Response
+import json
+
 from djhuskyapp.models import Party, Song
 from djhuskyapp.serializers import PartySerializer, SongSerializer
-
-
-class JSONResponse(HttpResponse):
-    """
-    An HttpResponse that renders its content into JSON.
-    """
-    def __init__(self, data, **kwargs):
-        content = JSONRenderer().render(data)
-        kwargs['content_type'] = 'application/json'
-        super(JSONResponse, self).__init__(content, **kwargs)
 
 
 class PartyViewSet(viewsets.ModelViewSet):
@@ -25,6 +17,16 @@ class PartyViewSet(viewsets.ModelViewSet):
     """
     queryset = Party.objects.all()
     serializer_class = PartySerializer
+
+    @detail_route()
+    def highest_rated(self, request, pk):
+        party = Party.objects.get(party_id=pk)
+        raw_data = PartySerializer(party)
+        actual_data = raw_data.data
+        # songs = actual_data['songs']
+        # sorted(songs, key=lambda song: -(song['upvotes'] - song['downvotes']))
+        # actual_data['songs'] = songs
+        return Response(actual_data)
 
 
 class SongViewSet(viewsets.ModelViewSet):
