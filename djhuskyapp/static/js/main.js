@@ -75,6 +75,7 @@ $(document).ready(function() {
 
     function addToQueue(name, artist, id) {
         var listToAddTo = $("#queue");
+<<<<<<< HEAD
         var result = [
             "<div class='containerthing'>",
             "   <img src='../static/img/up-arrow.png' width='20px' height='20px'>",
@@ -85,6 +86,16 @@ $(document).ready(function() {
             "   </div>",
             "</div>",
             "<div style='clear: both;'></div>"].join("\n");
+=======
+        var result = "<div class='containerthing'>" +
+            "<img src='../static/img/up-arrow.png' width='20px' height='20px'>" +
+            "<img src='../static/img/down-arrow.png' width='20px' height='20px'>" +
+            "<div class='song'>" +
+            "<p class='title'>" + name + "</p>" +
+            "<p class='artist'>" + artist + "</p>" +
+            "</div>" +
+            "<div style='clear: both;'></div>";
+>>>>>>> 0c1dd70ef4b5f0cbedc31b7fc7700a8010293570
         listToAddTo.append(result);
     }
 
