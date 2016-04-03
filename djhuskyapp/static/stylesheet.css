@@ -1,0 +1,89 @@
+.color-primary-0 { color: #AA3939 }	/* Main Primary color */
+.color-primary-1 { color: #FFAAAA }
+.color-primary-2 { color: #D46A6A }
+.color-primary-3 { color: #801515 }
+.color-primary-4 { color: #550000 }
+
+body {
+    background-color: #AA3939;
+    color: #f1a9a0;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+.material-icons {
+    display: inline-block;
+    text-align: right;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#content {
+    margin-left:auto;
+    margin-right:auto;
+    width:75%;
+    display: inline-block;
+    text-align: center;
+}
+
+#songinput {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    border: none;
+    color: #f1a9a0;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #a11c00;
+    font-family: 'Open Sans', sans-serif;
+    font-size: medium;
+}
+
+#queue {
+    text-align: left;
+    list-style-type: none;
+    padding: 0px;
+}
+
+.song {
+    color: #D46A6A;
+    line-height: 0em;
+    padding: 5px;
+}
+
+#nowplaying {
+    color: #f1a9a0;
+    background-color: #801515;
+    overflow: hidden;
+}
+
+.title {
+	float: left;
+}
+.artist {
+	float: right;
+}
+
+#songs .ui-selecting {
+    background-color: #550000;
+    color: #550000;
+}
+
+#songs .ui-selected {
+    color: #550000;
+    border-width: thick;
+    border-color: blue;
+}
+
+.sidebar.left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 270px;
+    background: #448AFF;
+}
