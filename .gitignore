@@ -1,2 +1,3 @@
 credentials.sh
 venv
+db.sqlite3

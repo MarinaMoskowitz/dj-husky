@@ -84,8 +84,8 @@ $(document).ready(function() {
         $.ajax({
             type: "POST",
             url:"/api/songs/",
-            data: JSON.stringify(data),
             contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(data),
             success: function() {alert("success");}
         });
     }
