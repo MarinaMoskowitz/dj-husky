@@ -77,6 +77,8 @@ $(document).ready(function() {
 
             addToQueue(title, artist, id);
         });
+
+
     });
 
     function addToQueue(name, artist, id) {
