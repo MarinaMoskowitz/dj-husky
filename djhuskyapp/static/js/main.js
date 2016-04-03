@@ -6,7 +6,6 @@ $(document).ready(function() {
 
         var party_title = response.name;
         $("#partyname").val("Welcome to " + party_title + "!");
-        console.log(JSON.stringify(party_title));
     });
 
 
@@ -69,13 +68,14 @@ $(document).ready(function() {
         var selected_songs = $(".ui-selected");
 
         selected_songs.each(function() {
-            var result = this.innerHTML;
-            console.log(result);
-            console.log($(result).attr('id'));
-            console.log($(result).val('title ui-selectee'));
-            console.log($(result).attr('class'));
-            console.log($(result).attr('artist.ui-selectee'));
-            //console.log(result.id);
+            var id = $(this.innerHTML).attr('id');
+            var title = $(this).find('.title').text();
+            var artist = $(this).find('.artist').text();
+            console.log(id);
+            console.log(title);
+            console.log(artist);
+
+            addToQueue(title, artist, id);
         });
     });
 
