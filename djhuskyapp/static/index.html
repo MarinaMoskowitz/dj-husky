@@ -19,7 +19,7 @@
         <h1 style="text-align: center">DJ-Husky</h1>
 
         <div id="content">
-            <h2 id="partyname">Welcome to Party {{ party.name }}!</h2>
+            <h2 id="partyname">Welcome to Sean's Party!</h2>
 
             <!-- <form autocomplete="off">
                 <input type='text' value='Enter a song' id='songinput'>
@@ -29,9 +29,10 @@
 
                 {% for song in songs %}
                 <div class="song" id="nowplaying">
-                    <p class="title">{{ song.title }}</p>
+                    <p class="title">Never Gonna Give you up</p>
                     <p class="artist">{{ song.artist }}</p>
                 </div>
+                <div style="clear: both;"></div>
                 {% endfor %}
             </ul>
         </div>
@@ -40,6 +41,14 @@
             <form autocomplete="off">
                 <input type='text' value='Enter a song' id='songinput'>
             </form>
+
+            <ul id="results">
+                <div class="song" id="nowplaying">
+                    <p class="title">{{ song.title }}</p>
+                    <p class="artist">{{ song.artist }}</p>
+                </div>
+                <div style="clear: both;"></div>
+            </ul>
         </div>
 
     </body>

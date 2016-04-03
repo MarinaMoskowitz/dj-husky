@@ -30,19 +30,6 @@ body {
     text-align: center;
 }
 
-#songinput {
-    text-align: center;
-    width: 100%;
-    margin: auto;
-    border: none;
-    color: #f1a9a0;
-    border: none;
-    background: transparent;
-    border-bottom: 1px solid #a11c00;
-    font-family: 'Open Sans', sans-serif;
-    font-size: medium;
-}
-
 #queue {
     text-align: left;
     list-style-type: none;
@@ -68,15 +55,11 @@ body {
 	float: right;
 }
 
-#songs .ui-selecting {
-    background-color: #550000;
-    color: #550000;
+#results .ui-selecting {
 }
 
-#songs .ui-selected {
-    color: #550000;
-    border-width: thick;
-    border-color: blue;
+#results .ui-selected {
+    color: #FFAAAA;
 }
 
 .sidebar.left {
@@ -84,6 +67,26 @@ body {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 270px;
-    background: #448AFF;
+    width: 400px;
+    background-color: #550000;
+    opacity: 0.9;
+}
+
+#songinput {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    border: none;
+    color: #f1a9a0;
+    border: none;
+    background: transparent;
+    font-family: 'Open Sans', sans-serif;
+    font-size: medium;
+}
+
+#results .song {
+    color: #AA3939;
+    width: inherit;
+    font-size: 70%;
+    padding: 0px;
 }
