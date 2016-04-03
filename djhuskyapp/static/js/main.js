@@ -71,6 +71,8 @@ $(document).ready(function() {
 
             addToQueue(title, artist, id);
         });
+
+
     });
 
     function addToQueue(name, artist, id) {
@@ -90,8 +92,6 @@ $(document).ready(function() {
             data: JSON.stringify(data),
             success: function() {alert("success");}
         });
-
-        //$.post("/api/songs/", JSON.stringify(data));
     }
 
     function addToVisualQueue(name, artist) {
