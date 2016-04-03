@@ -1,4 +1,17 @@
 $(document).ready(function() {
+
+    $.ajax({
+        url: "/api/parties/21/?format=json"
+    }).success(function(response) {
+
+        var party_title = response.name;
+        $("#partyname").val("Welcome to " + party_title + "!");
+
+        console.log(JSON.stringify(party_title));
+    });
+
+
+
     $(".sidebar.left").sidebar();
 
     $(".sidebar.left").blur();
@@ -31,8 +44,10 @@ $(document).ready(function() {
                 for (var i = 0, len=data.length; i < len; i++) {
                     var title = data[i].name;
                     var artist = data[i].artists[0].name;
+                    var uri = data[i].uri
 
-                    result += "<li><div class='song'><p class='title'>" + title + "</p>" + "<p class='artist'>" + artist + "</p></div><div style='clear: both;''></div></li>";
+                    result += "<li><div class='song'><p class='title' id='+ uri +'>" + title + "</p>" + "<p class='artist'>" + artist
+                        + "</p></div><div style='clear: both;''></div></li>";
                 }
                 $("#results").html(result);
             });
