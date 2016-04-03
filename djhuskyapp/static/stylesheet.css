@@ -30,19 +30,6 @@ body {
     text-align: center;
 }
 
-#songinput {
-    text-align: center;
-    width: 100%;
-    margin: auto;
-    border: none;
-    color: #f1a9a0;
-    border: none;
-    background: transparent;
-    border-bottom: 1px solid #a11c00;
-    font-family: 'Open Sans', sans-serif;
-    font-size: medium;
-}
-
 #queue {
     text-align: left;
     list-style-type: none;
@@ -68,22 +55,61 @@ body {
 	float: right;
 }
 
-#songs .ui-selecting {
-    background-color: #550000;
-    color: #550000;
-}
-
-#songs .ui-selected {
-    color: #550000;
-    border-width: thick;
-    border-color: blue;
-}
-
 .sidebar.left {
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
-    width: 270px;
-    background: #448AFF;
+    width: 400px;
+    background-color: #550000;
+    opacity: 0.9;
+}
+
+#songinput {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    border: none;
+    color: #f1a9a0;
+    border: none;
+    background: transparent;
+    font-family: 'Open Sans', sans-serif;
+    font-size: medium;
+}
+
+#results {
+    color: #AA3939;
+    font-size: 70%;
+    list-style-type: none;
+    margin-left:0;
+
+    padding: 0;
+}
+
+#results p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/*#results .title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}*/
+
+/*.sidebar.left #button {
+    background: green;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+}*/
+
+#results .ui-selecting {
+    background-color: #801515;
+    color: #FFAAAA;
+}
+
+#results .ui-selected {
+    color: #FFAAAA;
 }
